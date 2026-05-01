@@ -46,3 +46,12 @@
 - Confirm server starts without TypeScript errors
 - `curl http://localhost:3001/` returns HTML containing "Welcome to AgentClinic"
 - Open `http://localhost:3001/` in a browser and confirm the styled home page renders
+
+## 7. Add Automated Tests
+
+- Create `backend/src/app.ts` that exports the configured Express app.
+- Refactor `backend/src/index.ts` to import `app` and start the server (`app.listen()`).
+- Install `vitest`, `supertest`, and `@types/supertest` as dev dependencies.
+- Add `"test": "vitest run"` script to `backend/package.json`.
+- Create `backend/src/app.test.ts` to test that `GET /` returns a 200 OK and HTML containing "Welcome to AgentClinic".
+- Run `npm test` to confirm the test passes.

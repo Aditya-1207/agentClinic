@@ -43,6 +43,16 @@ curl http://localhost:3001/
 - **Pass:** `ts-node-dev` restarts automatically, refreshing the browser shows the updated text
 - **Fail:** Manual restart required
 
+### 6. Automated tests pass
+
+```bash
+cd backend
+npm test
+```
+
+- **Pass:** Vitest runs and reports that the test suite passed successfully.
+- **Fail:** Tests fail to run or assertions fail.
+
 ## Merge criteria
 
-All five checks above pass → the branch is ready to merge into `master`.
+All six checks above pass → the branch is ready to merge into `master`.
