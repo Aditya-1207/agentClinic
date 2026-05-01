@@ -4,12 +4,12 @@ Phases are intentionally small — each one is a shippable slice of work, indepe
 
 ---
 
-## Phase 1 — Hello Express
+## Phase 1 — Hello Express ✅
 
-- Initialize Node.js project with TypeScript (`tsconfig.json`, `package.json`)
-- Install and configure Express with `ts-node-dev` for hot reloading
-- Single `GET /` route returning `"AgentClinic is open for business"`
-- Confirm TypeScript types compile and the server starts cleanly
+- ~~Initialize Node.js project with TypeScript (`tsconfig.json`, `package.json`)~~
+- ~~Install and configure Express with `ts-node-dev` for hot reloading~~
+- ~~Single `GET /` route returning `"AgentClinic is open for business"`~~
+- ~~Confirm TypeScript types compile and the server starts cleanly~~
 
 ## Phase 2 — Hello Next.js
 

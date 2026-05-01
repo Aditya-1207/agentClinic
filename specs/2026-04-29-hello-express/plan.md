@@ -22,15 +22,18 @@
 - Listen on port `3001`
 - Log a startup message to console: `Server running on http://localhost:3001`
 
-## 4. Serve a minimal home page
+## 4. Add a main layout with header/main/footer and external CSS
 
-- Create `backend/src/views/home.ts` exporting a function that returns an HTML string
-- The HTML page should include:
-  - A `<title>` of "AgentClinic"
-  - An `<h1>` heading: "Welcome to AgentClinic"
-  - A short tagline paragraph: "A wellness clinic for AI agents"
-  - Inline `<style>` with basic styling (centered layout, clean font, background color)
-- Update `GET /` in `src/index.ts` to return this HTML with `Content-Type: text/html`
+- Create `backend/public/styles.css` with global styles (reset, typography, colors, layout)
+- Serve `backend/public/` as static files via `express.static` in `src/index.ts`
+- Create `backend/src/views/header.ts` — exports `renderHeader()` returning a `<header>` with the site name and nav
+- Create `backend/src/views/footer.ts` — exports `renderFooter()` returning a `<footer>` with a copyright line
+- Create `backend/src/views/layout.ts` — exports `renderLayout(title, content)` that:
+  - Returns a full HTML document (`<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`)
+  - Links to `/styles.css` in the `<head>`
+  - Wraps `content` inside `<header>` / `<main>` / `<footer>` using the subcomponents
+- Update `backend/src/views/home.ts` to return only page-specific content (heading + tagline)
+- Update `GET /` in `src/index.ts` to wrap the home content with `renderLayout("AgentClinic", ...)`
 
 ## 5. Add dev script
 
