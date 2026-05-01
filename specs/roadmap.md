@@ -60,7 +60,6 @@ Phases are intentionally small — each one is a shippable slice of work, indepe
 
 ## Phase 9 — Polish & Accessibility
 
-- Responsive layout for Steve's modern-browser requirement
 - Consistent styling across all pages (typography, color, spacing)
 - Semantic HTML audit, keyboard navigation, and focus styles
 

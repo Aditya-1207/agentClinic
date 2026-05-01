@@ -99,3 +99,25 @@ footer {
   color: var(--color-text-muted);
   font-weight: 300;
 }
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+    gap: 1rem;
+  }
+  
+  header nav a {
+    margin: 0 0.75rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+  }
+}

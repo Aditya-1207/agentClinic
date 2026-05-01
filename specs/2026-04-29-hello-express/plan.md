@@ -25,6 +25,7 @@
 ## 4. Add a main layout with header/main/footer and external CSS
 
 - Create `backend/public/styles.css` with global styles (reset, typography, colors, layout)
+- Include media queries in `styles.css` for responsive mobile design
 - Serve `backend/public/` as static files via `express.static` in `src/index.ts`
 - Create `backend/src/views/header.ts` — exports `renderHeader()` returning a `<header>` with the site name and nav
 - Create `backend/src/views/footer.ts` — exports `renderFooter()` returning a `<footer>` with a copyright line

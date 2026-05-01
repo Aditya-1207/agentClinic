@@ -53,6 +53,12 @@ npm test
 - **Pass:** Vitest runs and reports that the test suite passed successfully.
 - **Fail:** Tests fail to run or assertions fail.
 
+### 7. Responsive design works
+
+- Open the browser's developer tools and toggle Device Toolbar (mobile view) or shrink the browser window.
+- **Pass:** Header and typography scale down gracefully without horizontal scrolling.
+- **Fail:** Elements overflow, header breaks, or text is unreadable on small screens.
+
 ## Merge criteria
 
-All six checks above pass → the branch is ready to merge into `master`.
+All seven checks above pass → the branch is ready to merge into `master`.

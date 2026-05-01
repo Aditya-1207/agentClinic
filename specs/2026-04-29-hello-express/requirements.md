@@ -13,6 +13,7 @@ Stand up a minimal Express server written in TypeScript that proves the backend 
 - TypeScript in strict mode (`"strict": true`)
 - Express configured with a single `GET /` route
 - `GET /` serves a minimal HTML home page with heading, tagline, and inline styling
+- Responsive layout supporting mobile and desktop screens
 - `ts-node-dev` for hot-reloading during development
 - Server listens on port `3001` (to avoid collision with Next.js on `3000`)
 - Automated unit/integration testing with Vitest and Supertest
@@ -36,6 +37,7 @@ Stand up a minimal Express server written in TypeScript that proves the backend 
 | Dev runner | `ts-node-dev` | Hot reload out of the box, specified in the roadmap |
 | Testing | `vitest` + `supertest` | Fast testing framework that aligns with the full-TypeScript stack |
 | Testability | Extract `app.ts` | Separating app config from server startup allows `supertest` to test endpoints without port conflicts |
+| Responsive UI | Media queries | Ensures the app is usable on mobile devices from Phase 1 |
 
 ## Context
 
