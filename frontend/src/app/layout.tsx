@@ -15,6 +15,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="container">
+          <nav>
+            <ul>
+              <li><strong>AgentClinic</strong></li>
+            </ul>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/agents">Agents</a></li>
+              <li><a href="/ailments">Ailments</a></li>
+            </ul>
+          </nav>
           {children}
         </main>
       </body>

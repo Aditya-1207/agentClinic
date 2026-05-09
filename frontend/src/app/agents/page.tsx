@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { Agent } from '@/types';
 
 export const dynamic = 'force-dynamic';
 
-async function getAgents() {
-  const res = await fetch('http://localhost:3001/api/agents', { cache: 'no-store' });
+async function getAgents(): Promise<Agent[]> {
+  const url = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+  const res = await fetch(`${url}/agents`, { cache: 'no-store' });
   if (!res.ok) throw new Error('Failed to fetch agents');
   return res.json();
 }
@@ -33,7 +35,7 @@ export default async function AgentsPage() {
               </tr>
             </thead>
             <tbody>
-              {agents.map((agent: any) => (
+              {agents.map((agent) => (
                 <tr key={agent.id}>
                   <td>{agent.id}</td>
                   <td>{agent.name}</td>
