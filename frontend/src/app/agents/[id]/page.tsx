@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Agent } from '@/types';
+import AppointmentBookingForm from './AppointmentBookingForm';
 
 export const dynamic = 'force-dynamic';
 
@@ -52,6 +53,10 @@ export default async function AgentDetailPage({ params }: Props) {
         ) : (
           <p>No ailments diagnosed.</p>
         )}
+      </section>
+
+      <section>
+        <AppointmentBookingForm agentId={agent.id} />
       </section>
 
       <footer>
